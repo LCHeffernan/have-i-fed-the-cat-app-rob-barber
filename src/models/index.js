@@ -9,9 +9,11 @@ const setUpDatabase = () => {
         dialect: "postgres"
     })
 
+    const Cat = CatModel(connection, Sequelize);
+
     connection.sync({alter: true});
 
-    return { cat };
+    return { Cat };
 }
 
 module.exports = setUpDatabase();

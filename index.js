@@ -2,7 +2,7 @@ const app = require('./src/app');
 
 const APP_PORT = 3000;
 
-app,post('/cats', (req, res) => {
+app.post('/cats', (req, res) => {
     const { body } = req;
     res.status(201).json(body)
 })
